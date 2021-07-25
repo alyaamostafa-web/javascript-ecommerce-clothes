@@ -1,0 +1,80 @@
+{
+    "products": [{
+            "id": 6,
+            "title": "Switshirt",
+            "image": "./images/products/product_1.png",
+            "price": 760,
+            "category": "Men's"
+        },
+
+        {
+            "id": 3,
+            "title": "T-shirt",
+            "image": "./images/products/product_2.png",
+            "price": 265,
+            "category": "Women's"
+        },
+        {
+            "id": 4,
+            "title": "Red Switshirt",
+            "image": "./images/products/product_3.png",
+            "price": 850,
+            "category": "Women's"
+        },
+        {
+            "id": 8,
+            "title": "Beautiful Bag",
+            "image": "./images/products/product_4.png",
+            "price": 290,
+            "category": "Accessories's"
+        },
+        {
+            "id": 5,
+            "title": "Shoes",
+            "image": "./images/products/product_5.png",
+            "price": 250,
+            "category": "Men's"
+        },
+
+        {
+            "id": 7,
+            "title": "Sun Glasses",
+            "image": "./images/products/product_6.png",
+            "price": 365,
+            "category": "Accessories's"
+        },
+
+
+        {
+            "id": 10,
+            "title": "Woman Switshirt",
+            "image": "./images/products/product_7.png",
+            "price": 385,
+            "category": "Women's"
+        },
+        {
+            "id": 11,
+            "title": "Hand Bag",
+            "image": "./images/products/product_8.png",
+            "price": 475,
+            "category": "Accessories's"
+        },
+        {
+            "id": 13,
+            "title": "Nike Switshirt",
+            "image": "./images/products/product_9.png",
+            "price": 800,
+            "category": "Men's"
+        },
+        {
+            "id": 12,
+            "title": "Man'T-shirt",
+            "image": "./images/products/product_10.png",
+            "price": 850,
+            "category": "Men's"
+        }
+
+        
+
+    ]
+}
