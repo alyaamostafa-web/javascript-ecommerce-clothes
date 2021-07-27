@@ -74,19 +74,19 @@ Array.from(scrollLink).map(link => {
 // Fix NavBar
 
 window.addEventListener("scroll", e => {
-  const scrollHeight = window.pageYOffset;
-  const navHeight = navBar.getBoundingClientRect().height;
-  if (scrollHeight > navHeight) {
-    navBar.classList.add("fix__nav");
-  } else {
-    navBar.classList.remove("fix__nav");
-  }
 
-  if (scrollHeight > 300) {
-    gotoTop.classList.add("show-top");
-  } else {
-    gotoTop.classList.remove("show-top");
-  }
+  // When the scroll is greater than 100 viewport height, add the fix__na class to the navBar tag
+  if (this.scrollY >= 100) navBar.classList.add("fix__nav");
+  else navBar.classList.remove("fix__nav");
+
+
+
+  //Goto-Top
+ 
+  // When the scroll is higher than 200 viewport height, add the show-top class to the a tag with the gotoTop class
+  if (this.scrollY >= 200) gotoTop.classList.add("show-top");
+  else gotoTop.classList.remove("show-top");
+
 });
 
 
