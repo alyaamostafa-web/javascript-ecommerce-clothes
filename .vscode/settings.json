@@ -7,5 +7,6 @@
         "*.sln": true,
         "*.suo": true
     },
-    "files.autoGuessEncoding": true
+    "files.autoGuessEncoding": true,
+    "liveServer.settings.port": 5501
 }

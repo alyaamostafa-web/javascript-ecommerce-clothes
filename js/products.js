@@ -7,6 +7,7 @@ const getProducts = async () => {
     const result = await fetch("/data/products.json");
     const data = await result.json();
     const products = data.products;
+
     return products;
   } catch (err) {
     console.log(err);
@@ -14,19 +15,20 @@ const getProducts = async () => {
 };
 
 //Load Product
-
 window.addEventListener("DOMContentLoaded", async () => {
   const products = await getProducts();
   displayProductItems(products);
 });
+
 const categoryCenter = document.querySelector(".category__center");
 
 //Display Products
 
 const displayProductItems = (item) => {
-  let displayProduct = item.map(
+  let displayProduct = ``;
+  item.map(
     (product) =>
-      `
+      (displayProduct += `
         <div class="product">
         <div class="product__header">
           <img src=${product.image} alt="product">
@@ -53,7 +55,7 @@ const displayProductItems = (item) => {
           <div class="product__price">
             <h4>${product.price}</h4>
           </div>
-          <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
+          <a href="#"><button type="submit" class="product__btn add-to-cart-btn">Add To Cart</button></a>
         </div>
         <ul>
           <li>
@@ -79,9 +81,8 @@ const displayProductItems = (item) => {
           </li>
         </ul>
       </div>
-        `
+        `)
   );
-  displayProduct = displayProduct.join("");
   if (categoryCenter) {
     categoryCenter.innerHTML = displayProduct;
   }
@@ -101,13 +102,13 @@ if (categoryContainer) {
 
     if (id) {
       // remove active from buttons
-      Array.from(filterBtn).forEach(btn => {
+      Array.from(filterBtn).forEach((btn) => {
         btn.classList.remove("active");
       });
       target.classList.add("active");
 
       // Load Products
-      let menuCategory = products.filter(product => {
+      let menuCategory = products.filter((product) => {
         if (product.category === id) {
           return product;
         }
